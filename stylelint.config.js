@@ -5,7 +5,8 @@ export default {
       {
           files: ['*.vue', '**/*.vue'],
           rules: {
-              'unit-allowed-list': ['em', 'rem', 's', 'ms']
+              'unit-allowed-list': ['em', 'rem', 's', 'ms'],
+              'no-empty-source': null
           }
       }
   ]
