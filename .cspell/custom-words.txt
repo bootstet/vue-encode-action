@@ -1,3 +1,7 @@
-bootstet
-Vetur
 behaviour
+bootstet
+Echart
+echarts
+pinia
+Vetur
+Zrender

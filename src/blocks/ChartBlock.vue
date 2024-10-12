@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import ChartRenderer from '../components/ChartRenderer/ChartRenderer.vue'
 
 </script>
 
 <template>
-  Chart Block
+  <ChartRenderer></ChartRenderer>
 </template>
 
 <style scoped>

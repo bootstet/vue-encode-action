@@ -40,7 +40,7 @@ const blocksData  = ref(blocks)
 
 <template>
   <div>
-    <div>
+    <div class="material-container">
       <SmoothDndContainer 
         group-name="blocks"
         @drop="blocksData = applyDrag(toRaw(blocksData), $event)"
