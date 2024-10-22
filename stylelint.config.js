@@ -5,7 +5,7 @@ export default {
       {
           files: ['*.vue', '**/*.vue'],
           rules: {
-              'unit-allowed-list': ['em', 'rem', 's', 'ms', '%', 'px' ],
+              'unit-allowed-list': ['em', 'rem', 's', 'ms', '%', 'px', 'vh', 'fr' ],
               'no-empty-source': null,
               "function-no-unknown": [true, {
                   ignoreFunctions: ['const']

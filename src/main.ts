@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { App, createApp } from 'vue'
-import './style.css'
 import AppEle from './App.vue'
+import { createPinia } from 'pinia'
 import { createBlocks, createBlocksFn, initialBlocks } from './blocks'
+import router from './router'
 
 
 const bootstetPlugin = {
@@ -19,6 +20,8 @@ app.use(bootstetPlugin)
 // app.use(createBlocksFn)
 // app.use(createBlocks())
 app.use(initialBlocks)
+app.use(createPinia())
+app.use(router)
 
 app.mount('#app')
  
