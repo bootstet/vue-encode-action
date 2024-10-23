@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BlockRenderer from '@/blocks/BlockRenderer.vue'
+import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
 
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
 import type { PreviewType } from './type'
@@ -29,7 +29,7 @@ function greet(mode: PreviewType) {
         <div class="layout-runner-content-title">bootstet</div>
       </div>
       <div class="layout-runner-content">
-        <BlockRenderer />
+        <BlocksRenderer />
       </div>
     </div>
   </div>
