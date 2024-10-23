@@ -86,7 +86,7 @@ const Icon = defineComponent({
           src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/11.3.0/2/svg/1f469-200d-1f692.svg"
         />
       </div>
-      <h1 class="app-name">Byelide</h1>
+      <h1 class="app-name">bootstet</h1>
     </div>
     <div class="app-navigator-link-wrapper">
       <RouterLink

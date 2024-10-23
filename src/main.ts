@@ -2,9 +2,9 @@
 import { App, createApp } from 'vue'
 import AppEle from './App.vue'
 import { createPinia } from 'pinia'
-import { createBlocks, createBlocksFn, initialBlocks } from './blocks'
 import router from './router'
-
+import './assets/main.css'
+import { setup } from './setup'
 
 const bootstetPlugin = {
   install (app: App<Element>) {
@@ -19,9 +19,10 @@ const app = createApp(AppEle)
 app.use(bootstetPlugin)
 // app.use(createBlocksFn)
 // app.use(createBlocks())
-app.use(initialBlocks)
 app.use(createPinia())
 app.use(router)
+
+setup(app)
 
 app.mount('#app')
  

@@ -4,5 +4,6 @@ Byelide
 Echart
 echarts
 pinia
+tiptap
 Vetur
 Zrender

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BlockRenderer from '@/blocks/BlockRenderer.vue'
+
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
 import type { PreviewType } from './type'
 const props = defineProps<{
@@ -24,9 +26,11 @@ function greet(mode: PreviewType) {
     <div class="layout-runner-content-wrapper tiny-scrollbar">
       <div class="layout-runner-content-header">
         <div class="layout-runner-content-navigator"></div>
-        <div class="layout-runner-content-title">Byelide</div>
+        <div class="layout-runner-content-title">bootstet</div>
       </div>
-      <div class="layout-runner-content"></div>
+      <div class="layout-runner-content">
+        <BlockRenderer />
+      </div>
     </div>
   </div>
 </template>
