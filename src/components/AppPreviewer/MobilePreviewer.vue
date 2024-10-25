@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
+
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
 import StatusBar from './StatusBar.vue'
 import type { PreviewType } from './type'
@@ -27,7 +29,9 @@ function greet(mode: PreviewType) {
           <div class="simulator-navigator">bootstet</div>
         </div>
       </div>
-      <div class="simulator"></div>
+      <div class="simulator">
+        <BlocksRenderer />
+      </div>
     </div>
   </div>
 </template>

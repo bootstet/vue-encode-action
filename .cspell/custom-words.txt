@@ -6,5 +6,7 @@ Echart
 echarts
 pinia
 tiptap
+veaury
 Vetur
+vueuse
 Zrender

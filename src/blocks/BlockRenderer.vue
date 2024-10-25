@@ -27,7 +27,7 @@ const appEditorStore = useAppEditorStore()
 const { currentBlockId, blocks } = storeToRefs(appEditorStore)
 const { selectBlock } = appEditorStore
 
-
+// console.log('block', block)
 </script>
 
 <template>
