@@ -1,22 +1,40 @@
 <script setup lang="ts">
+import { useFullscreen } from '@vueuse/core'
+import { ref } from 'vue'
 
-import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
+import AppLaptopPreviewer from '../AppPreviewer/LaptopPreviewer.vue'
+import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
+import type { PreviewType } from './type'
+const props = defineProps<{
+  previewMode?: PreviewType
+}>()
 
+const runner = ref<HTMLElement | null>(null)
+
+const { toggle } = useFullscreen(runner)
+
+const emit = defineEmits<{
+  'preview-mode-change': [mode: PreviewType]
+}>()
+
+function greet(mode: PreviewType) {
+  emit('preview-mode-change', mode)
+}
 </script>
 
 <template>
-  <div class="layout-runner">
-    <div class="layout-runner-content-wrapper tiny-scrollbar">
-      <div class="layout-runner-content-header">
-        <div class="layout-runner-content-navigator" />
-        <div class="layout-runner-content-title">
-          bootstet
-        </div>
-      </div>
-      <div class="layout-runner-content">
-        <BlocksRenderer />
-      </div>
+  <div class="layout-runner" ref="runner">
+    <div class="layout-runner-navigator">
+      <div></div>
+      <div class="address-wrapper">https://helloword.com/sdfsfsdf/sggwefwfsdfsdfsdfsdfsf</div>
+
+      <PreviewModeSwitcher
+        :preview-mode="props.previewMode"
+        @preview-mode-change="greet"
+        @full-screen="toggle"
+      />
     </div>
+    <AppLaptopPreviewer />
   </div>
 </template>
 

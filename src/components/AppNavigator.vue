@@ -94,7 +94,7 @@ const Icon = defineComponent({
         v-for="item in linkItems"
         :key="item.value"
         :style="activeLink === item.value && { background: item.bg }"
-        :to="item.value"
+        :to="`/app/${item.value}`"
       >
         <!-- defineComponent + h 代替条件渲染 -->
         <!-- <div v-if="item.value === 'dataSource'"><Data /></div>
